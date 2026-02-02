@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Menú Principal</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f0f0f0;
+            background-color: #F5DEB3;
         }
         .menu-container {
             margin-top: 50px;
@@ -17,49 +18,46 @@
             margin: 20px;
             padding: 20px 40px;
             font-size: 18px;
-            background-color: #4CAF50;
+            background-color: #34495E;
             color: white;
             text-decoration: none;
             border-radius: 10px;
             transition: 0.3s;
-            vertical-align: top;
-            width: 150px;
         }
         .menu-button:hover {
-            background-color: #45a049;
+            background-color: #34495E;
         }
         img {
             width: 150px;
             height: 150px;
             display: block;
             margin: 0 auto 10px auto;
-            object-fit: cover;
-            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-<h1>Menú Principal</h1>
-<div class="menu-container">
-    <a class="menu-button" th:href="@{/boj}">
-        <img src="https://via.placeholder.com/150" alt="boj">
-        boj
-    </a>
-    <a class="menu-button" th:href="@{/orellana}">
-        <img src="https://via.placeholder.com/150" alt="orellana">
-        orellana
-    </a>
-    <a class="menu-button" th:href="@{/santos}">
-        <img src="https://via.placeholder.com/150" alt="santos">
-        santos
-    </a>
-    <a class="menu-button" th:href="@{/sierra}">
-        <img src="https://via.placeholder.com/150" alt="sierra">
-        sierra
-    </a> <a class="menu-button" th:href="@{/yoj}">
-    <img th:src="@{/images/yoj/Yoj.jpg}" alt="yoj">
-    yoj
-</a>
-</div>
+    <h1>Menú Principal</h1>
+    <div class="menu-container">
+        <a class="menu-button" th:href="@{/boj}">
+            <img th:src="@{/images/menu/pokeball.gif}" alt="boj">
+            boj
+        </a>
+        <a class="menu-button" th:href="@{/orellana}">
+            <img th:src="@{/images/menu/toyotaspinner.gif}" alt="orellana">
+            orellana
+        </a>
+        <a class="menu-button" th:href="@{/santos}">
+            <img th:src="@{/images/menu/going-down-to-the-ground.gif}" alt="santos">
+            santos
+        </a>
+        <a class="menu-button" th:href="@{/sierra}">
+            <img th:src="@{/images/menu/music.gif}" alt="sierra">
+            sierra
+        </a>
+        <a class="menu-button" th:href="@{/yoj}">
+            <img th:src="@{/images/menu/maxwell.gif}" alt="yoj">
+            yoj
+        </a>
+    </div>
 </body>
 </html>
