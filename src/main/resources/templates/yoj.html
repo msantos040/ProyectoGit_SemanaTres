@@ -2,10 +2,54 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Vista Yoj</title>
+    <title>Vista</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e8eff1;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 { color: #2c3e50; }
+        p { color: #7f8c8d; line-height: 1.6; }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
-    <h1>Esta es la página de Yoj</h1>
-    <a th:href="@{/}">Volver al menú</a>
+
+<div class="container">
+    <h1>Bienvenido a mi sección</h1>
+    <hr>
+    <p>Esta es mi página personalizada dentro del proyecto grupal usando <b>Spring Boot</b> y <b>Thymeleaf</b>.</p>
+
+    <div style="margin: 20px 0;">
+        <img src="https://via.placeholder.com/100/3498db/ffffff?text=Y" alt="Icono Yoj" style="border-radius: 50%;">
+    </div>
+
+    <p><strong>Commit realizado con éxito Banana</strong></p>
+
+    <a class="back-button" th:href="@{/}">Volver al Menú</a>
+</div>
+
 </body>
 </html>
