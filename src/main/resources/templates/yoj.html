@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Vista</title>
+    <title>Vista de Yoj</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,7 +19,13 @@
             margin: 0 auto;
         }
         h1 { color: #2c3e50; }
-        p { color: #7f8c8d; line-height: 1.6; }
+        .img-profile {
+            width: 250px; /* Tamaño para que se vea bien el gatito */
+            height: auto;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
         .back-button {
             display: inline-block;
             margin-top: 20px;
@@ -28,10 +34,6 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            transition: 0.3s;
-        }
-        .back-button:hover {
-            background-color: #2980b9;
         }
     </style>
 </head>
@@ -40,13 +42,12 @@
 <div class="container">
     <h1>Bienvenido a mi sección</h1>
     <hr>
-    <p>Esta es mi página personalizada dentro del proyecto grupal usando <b>Spring Boot</b> y <b>Thymeleaf</b>.</p>
 
     <div style="margin: 20px 0;">
-        <img src="https://via.placeholder.com/100/3498db/ffffff?text=Y" alt="Icono Yoj" style="border-radius: 50%;">
+        <img th:src="@{/images/yoj/Yoj.jpg}" alt="Gatito Yoj" class="img-profile">
     </div>
 
-    <p><strong>Commit realizado con éxito Banana</strong></p>
+    <p><strong>Commit realizado con éxito Banana </strong></p>
 
     <a class="back-button" th:href="@{/}">Volver al Menú</a>
 </div>
