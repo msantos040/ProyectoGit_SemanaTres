@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Vista Juan</title>
+    <style>
+body {
+background-image: url("/src/main/resources/static/images/boj/fondo.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+margin: 0;
+font-family: Arial, sans-serif;
+color: #333;
+}
+
+header, footer{
+    background-color: rgba(255,255,255, 0.8);
+    text-align: center;
+    padding: 15px;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+
+
+    </style>
+     <h1>Esta es la página de Juan</h1>
+ <h2>Equipo pokemon ganador de la liga Sinnoh </h2>
+<p>Este equipo de 6 pokemons fueron los mejores con los cuales se pudo pasar la Liga de Sinnoh </p>
+ <hr> 
 </head>
 <body>
-    <h1>Esta es la página de Juan</h1>
-    <a th:href="@{/}">Volver al menú</a>
+    <ul>
+<li><img width="600px" alt="Este es Torterra" src="/src/main/resources/static/images/boj/torterra.jpg"></li>
+<li><img width="600px" alt="Este es Luxray" src="/src/main/resources/static/images/boj/luxray.jpg"></li>
+<li><img width="600px" alt="Este es Gastrodom" src="/src/main/resources/static/images/boj/gastrodom.jpg"></li>
+<li><img width="600px" alt="Este es Staraptor" src="/src/main/resources/static/images/boj/straratop.jpg"></li>
+<li><img width="600px" alt="Este es Garchomp" src="/src/main/resources/static/images/boj/garchomp.jpg"></li>
+<li><img width="600px" alt="Este es Giratina" src="/src/main/resources/static/images/boj/giratina.jpg"></li>
+    </ul>
+  <hr>
 </body>
+<footer>
+<a th:href="@{/}">Volver al menú</a>
+</footer>
 </html>
