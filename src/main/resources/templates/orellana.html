@@ -3,9 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <title>Vista Orellana</title>
+
+    <style>
+        body {
+            background-color: #e6dccf;
+            font-family: Arial, sans-serif;
+        }
+
+        .contenedor {
+            background-color: #f2e6d6;
+            width: 70%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #c9b8a6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a3325;
+        }
+
+        p {
+            text-align: center;
+            color: #3d2c21;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            background-color: #e0cfbb;
+            margin: 6px 0;
+            padding: 10px;
+            border: 1px solid #b9a693;
+        }
+
+        li:hover {
+            background-color: #d1bca6;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #4a3325;
+        }
+
+        .titulo-principal {
+            background-color: #d1bca6;
+            border: 2px solid #b9a693;
+            padding: 10px;
+            width: 60%;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+
+    </style>
+
+
 </head>
+
 <body>
-    <h1>Esta es la página de Orellana</h1>
+
+<div class="contenedor">
+    <h1 class="titulo-principal">Efren Orellana</h1>
+    <h1>Mis carros favoritos</h1>
+
+    <p>
+        Esta es una lista de carros que me gustan, me llaman la atención o directamente no se por qué están aquí :)
+    </p>
+
+    <ul>
+        <li>Ford Mustang</li>
+        <li>Toyota Supra</li>
+        <li>Dodge Charger</li>
+        <li>Bugatti Chiron</li>
+        <li>Nissan GT-R</li>
+        <li>Chevrolet Camaro</li>
+        <li>BMW M4</li>
+        <li>Porsche 911</li>
+        <li>Lamborghini Aventador</li>
+        <li>Ferrari 488</li>
+        <li>McLaren 720S</li>
+        <li>Audi R8</li>
+        <li>Mercedes-AMG GT</li>
+        <li>Tesla Model S</li>
+        <li>Mazda RX-7</li>
+        <li>Subaru WRX STI</li>
+        <li>Mitsubishi Lancer Evolution</li>
+        <li>Ford GT</li>
+        <li>Dodge Challenger</li>
+        <li>Koenigsegg Jesko</li>
+    </ul>
+
+    <p>No se me ocurre ningún otro carro :)</p>
+
     <a th:href="@{/}">Volver al menú</a>
+</div>
+
 </body>
 </html>
