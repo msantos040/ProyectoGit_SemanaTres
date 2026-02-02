@@ -1,0 +1,1 @@
+<img th:src="@{/images/sierra/spoti.png}" alt="Logo" class="logo">
