@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Vista Santos</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .btn-menu {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-bottom: 40px;
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-menu:hover {
+            background-color: #ccc;
+        }
+
+        .gif-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .gif-container img {
+            width: 150px;
+            height: auto;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .gif-container img:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
-    <h1>Esta es la página de Santos</h1>
-    <a th:href="@{/}">Volver al menú</a>
+    <h1>Bienvenido y adios</h1>
+    <a class="btn-menu" th:href="@{/}">Volver al menú</a>
+
+    <div class="gif-container">
+        <img th:src="@{/images/santos/deltarune-meme.gif}" alt="GIF 1">
+        <img th:src="@{/images/santos/art-breakdance.gif}" alt="GIF 2">
+        <img th:src="@{/images/santos/deltarune.gif}" alt="GIF 3">
+        <img th:src="@{/images/santos/sanstuba.gif}" alt="GIF 4">
+        <img th:src="@{/images/santos/spinning-spin.gif}" alt="GIF 5">
+        <img th:src="@{/images/santos/trombone-musical-instrument.gif}" alt="GIF 6">
+    </div>
 </body>
 </html>
