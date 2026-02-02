@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Vista Yoj</title>
+    <title>Vista de Yoj</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e8eff1;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 { color: #2c3e50; }
+        .img-profile {
+            width: 250px; /* Tamaño para que se vea bien el gatito */
+            height: auto;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Esta es la página de Yoj</h1>
-    <a th:href="@{/}">Volver al menú</a>
+
+<div class="container">
+    <h1>Bienvenido a mi sección</h1>
+    <hr>
+
+    <div style="margin: 20px 0;">
+        <img th:src="@{/images/yoj/Yoj.jpg}" alt="Gatito Yoj" class="img-profile">
+    </div>
+
+    <p><strong>Commit realizado con éxito Banana </strong></p>
+
+    <a class="back-button" th:href="@{/}">Volver al Menú</a>
+</div>
+
 </body>
 </html>
