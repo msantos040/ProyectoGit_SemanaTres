@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Menú Principal</title>
@@ -22,6 +22,8 @@
             text-decoration: none;
             border-radius: 10px;
             transition: 0.3s;
+            vertical-align: top;
+            width: 150px;
         }
         .menu-button:hover {
             background-color: #45a049;
@@ -31,32 +33,33 @@
             height: 150px;
             display: block;
             margin: 0 auto 10px auto;
+            object-fit: cover;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>Menú Principal</h1>
-    <div class="menu-container">
-        <a class="menu-button" th:href="@{/boj}">
-            <img src="https://via.placeholder.com/150" alt="boj">
-            boj
-        </a>
-        <a class="menu-button" th:href="@{/orellana}">
-            <img src="https://via.placeholder.com/150" alt="orellana">
-            orellana
-        </a>
-        <a class="menu-button" th:href="@{/santos}">
-            <img src="https://via.placeholder.com/150" alt="santos">
-            santos
-        </a>
-        <a class="menu-button" th:href="@{/sierra}">
-            <img src="https://via.placeholder.com/150" alt="sierra">
-            sierra
-        <a class="menu-button" th:href="@{/yoj}">
-            <img th:src="@{/images/yoj/Yoj.jpg}" alt="yoj">
-            yoj
-        </a>
-
-    </div>
+<h1>Menú Principal</h1>
+<div class="menu-container">
+    <a class="menu-button" th:href="@{/boj}">
+        <img src="https://via.placeholder.com/150" alt="boj">
+        boj
+    </a>
+    <a class="menu-button" th:href="@{/orellana}">
+        <img src="https://via.placeholder.com/150" alt="orellana">
+        orellana
+    </a>
+    <a class="menu-button" th:href="@{/santos}">
+        <img src="https://via.placeholder.com/150" alt="santos">
+        santos
+    </a>
+    <a class="menu-button" th:href="@{/sierra}">
+        <img src="https://via.placeholder.com/150" alt="sierra">
+        sierra
+    </a> <a class="menu-button" th:href="@{/yoj}">
+    <img th:src="@{/images/yoj/Yoj.jpg}" alt="yoj">
+    yoj
+</a>
+</div>
 </body>
 </html>
