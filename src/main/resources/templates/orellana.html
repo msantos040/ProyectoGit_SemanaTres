@@ -2,78 +2,137 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Vista Orellana</title>
+    <title>Efren Orellana | Carros </title>
 
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
         body {
-            background-color: #e6dccf;
-            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #2c1d14, #8c6b4f, #e6dccf);
+            font-family: 'Segoe UI', Arial, sans-serif;
         }
 
-        .contenedor {
-            background-color: #f2e6d6;
-            width: 70%;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #c9b8a6;
-        }
-
-        h1 {
+        .encabezado {
             text-align: center;
+            padding: 60px 20px;
+            color: #fff;
+        }
+
+        .encabezado h1 {
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        }
+
+        .encabezado p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .contenido {
+            background-color: #f7efe6;
+            width: 80%;
+            max-width: 1200px;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .titulo-seccion h2 {
+            font-size: 2.2rem;
             color: #4a3325;
+            margin-bottom: 5px;
         }
 
-        p {
-            text-align: center;
-            color: #3d2c21;
+        .titulo-seccion span {
+            color: #7a563f;
+            font-weight: bold;
         }
 
         ul {
+            list-style: none;
             padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
         }
 
         li {
-            list-style: none;
-            background-color: #e0cfbb;
-            margin: 6px 0;
-            padding: 10px;
+            background: linear-gradient(145deg, #e0cfbb, #f3e7d8);
+            padding: 18px;
+            border-radius: 14px;
+            text-align: center;
+            font-weight: bold;
+            color: #3d2c21;
             border: 1px solid #b9a693;
+            transition: transform 0.25s, box-shadow 0.25s;
         }
 
         li:hover {
-            background-color: #d1bca6;
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.25);
         }
 
-        a {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            color: #4a3325;
+        .acciones {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
         }
 
-        .titulo-principal {
-            background-color: #d1bca6;
-            border: 2px solid #b9a693;
-            padding: 10px;
-            width: 60%;
-            margin: auto;
-            margin-bottom: 15px;
+        .boton {
+            padding: 14px 30px;
+            background: linear-gradient(135deg, #4a3325, #6a4b35);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 35px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: transform 0.25s, box-shadow 0.25s;
         }
 
+        .boton:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 768px) {
+            .encabezado h1 {
+                font-size: 2.3rem;
+            }
+
+            .contenido {
+                width: 90%;
+                padding: 25px;
+            }
+        }
     </style>
-
-
 </head>
 
 <body>
 
-<div class="contenedor">
-    <h1 class="titulo-principal">Efren Orellana</h1>
-    <h1>Mis carros favoritos</h1>
+<div class="encabezado">
+    <h1>Efren Orellana</h1>
+    <p>Colección de autos que me gustan</p>
+</div>
 
-    <p>
-        Esta es una lista de carros que me gustan, me llaman la atención o directamente no se por qué están aquí :)
-    </p>
+<div class="contenido">
+
+    <div class="titulo-seccion">
+        <h2>Mis carros favoritos</h2>
+    </div>
 
     <ul>
         <li>Ford Mustang</li>
@@ -92,15 +151,15 @@
         <li>Tesla Model S</li>
         <li>Mazda RX-7</li>
         <li>Subaru WRX STI</li>
-        <li>Mitsubishi Lancer Evolution</li>
         <li>Ford GT</li>
         <li>Dodge Challenger</li>
-        <li>Koenigsegg Jesko</li>
     </ul>
 
-    <p>No se me ocurre ningún otro carro :)</p>
+    <div class="acciones">
+        <a class="boton" th:href="@{/}">Mis datos</a>
+        <a class="boton" th:href="@{/}">Menú</a>
+    </div>
 
-    <a th:href="@{/}">Volver al menú</a>
 </div>
 
 </body>
