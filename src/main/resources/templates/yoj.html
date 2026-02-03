@@ -20,20 +20,40 @@
         }
         h1 { color: #2c3e50; }
         .img-profile {
-            width: 250px; /* Tamaño para que se vea bien el gatito */
+            width: 250px;
             height: auto;
             border-radius: 15px;
             margin: 20px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
+        .button-group {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
         .back-button {
             display: inline-block;
-            margin-top: 20px;
             padding: 10px 25px;
-            background-color: #3498db;
+            background-color: #BD3E28;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            transition: 0.3s;
+        }
+        .profile-button {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #2ecc71; /* Color verde para diferenciarlo */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .back-button:hover, .profile-button:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -47,9 +67,13 @@
         <img th:src="@{/images/yoj/Yoj.jpg}" alt="Gatito Yoj" class="img-profile">
     </div>
 
-    <p><strong>Commit realizado con éxito Banana </strong></p>
+    <p><strong>Commit realizado con éxito Banana</strong></p>
 
-    <a class="back-button" th:href="@{/}">Volver al Menú</a>
+    <div class="button-group">
+        <a class="profile-button" th:href="@{/yoj_perfil}">Ver mi Perfil Detallado</a>
+
+        <a class="back-button" th:href="@{/}">Volver al Menú</a>
+    </div>
 </div>
 
 </body>
