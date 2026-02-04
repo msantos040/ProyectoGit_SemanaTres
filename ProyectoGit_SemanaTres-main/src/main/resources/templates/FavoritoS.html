@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Favoritas | Sierrafy</title>
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #1DB954;
+            margin-bottom: 10px;
+        }
+
+        .descripcion {
+            background-color: #181818;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .descripcion strong {
+            color: #1DB954;
+        }
+
+        .song {
+            background-color: #181818;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        .song:hover {
+            background-color: #282828;
+        }
+
+        a {
+            color: #1DB954;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>💚 Mis Favoritas</h1>
+
+<div class="descripcion">
+    <p>
+        Mi nombre es <strong>Dennis Yared Sierra Pérez</strong>.
+        Soy una persona a la que le encanta <strong>escuchar música</strong>, ya que es parte de mi día a día y me acompaña en
+        casi todo lo que hago.
+    </p>
+
+    <p>
+        Disfruto mucho <strong>salir a la calle</strong>, conocer nuevos lugares, compartir con amigos y vivir nuevas
+        experiencias. También me gustan las <strong>mujeres</strong>, la buena compañía y pasarla bien.
+    </p>
+
+    <p>
+        Me considero alguien tranquilo, con buen gusto musical, que aprecia los momentos simples,
+        pero siempre está abierto a probar cosas nuevas y seguir creciendo.
+    </p>
+</div>
+
+
+
+<br>
+<a th:href="@{/}">← Volver al menú</a>
+
+</body>
+</html>

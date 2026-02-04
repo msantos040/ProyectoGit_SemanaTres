@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos de Efren Orellana</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #d1bca6, #e6dccf);
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        .contenido {
+            background-color: #f7efe6;
+            width: 65%;
+            margin: 50px auto;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        .titulo-principal {
+            text-align: center;
+            background-color: #4a3325;
+            color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .seccion-datos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .dato {
+            background-color: #e0cfbb;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #b9a693;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .dato:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .dato h3 {
+            color: #4a3325;
+            margin-bottom: 10px;
+        }
+
+        .dato p {
+            color: #3d2c21;
+            font-weight: bold;
+        }
+
+        .acciones {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .boton {
+            padding: 12px 25px;
+            background-color: #4a3325;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .boton:hover {
+            background-color: #3a271c;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .contenido {
+                width: 90%;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="contenido">
+    <h1 class="titulo-principal">Datos Personales</h1>
+
+    <div class="seccion-datos">
+
+        <div class="dato">
+            <h3>Nombre</h3>
+            <p>Efren Orellana</p>
+        </div>
+
+        <div class="dato">
+            <h3>Carrera</h3>
+            <p>Perito en Informática</p>
+        </div>
+
+        <div class="dato">
+            <h3>Deporte Favorito</h3>
+            <p>Fútbol</p>
+        </div>
+
+        <div class="dato">
+            <h3>Comida Favorita</h3>
+            <p>Lasaña</p>
+        </div>
+
+        <div class="dato">
+            <h3>Intereses</h3>
+            <p>Videojuegos, Autos, Tecnología</p>
+        </div>
+
+    </div>
+
+    <div class="acciones">
+        <a class="boton" th:href="@{/}">Menú</a>
+        <a class="boton" th:href="@{/orellana}">Regresar</a>
+    </div>
+</div>
+
+</body>
+</html>

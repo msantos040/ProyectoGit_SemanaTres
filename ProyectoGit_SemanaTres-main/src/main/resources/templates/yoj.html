@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Vista de Yoj</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e8eff1;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 { color: #2c3e50; }
+        .img-profile {
+            width: 250px;
+            height: auto;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .button-group {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #BD3E28;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .profile-button {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #2ecc71; /* Color verde para diferenciarlo */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .back-button:hover, .profile-button:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Bienvenido a mi sección</h1>
+    <hr>
+
+    <div style="margin: 20px 0;">
+        <img th:src="@{/images/yoj/Yoj.jpg}" alt="Gatito Yoj" class="img-profile">
+    </div>
+
+    <p><strong>Commit realizado con éxito Banana</strong></p>
+
+    <div class="button-group">
+        <a class="profile-button" th:href="@{/yoj_perfil}">Ver mi Perfil Detallado</a>
+
+        <a class="back-button" th:href="@{/}">Volver al Menú</a>
+    </div>
+</div>
+
+</body>
+</html>
