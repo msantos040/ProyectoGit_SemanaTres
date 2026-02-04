@@ -11,9 +11,9 @@ public class MenuController {
         return "menu"; 
     }
 
-    @GetMapping("/datos_juan")
-    public String datos_juan() {
-        return "datos_juan";
+    @GetMapping("/datos_boj")
+    public String datos_boj() {
+        return "datos_boj";
     }
 
     @GetMapping("/boj")
@@ -46,9 +46,9 @@ public class MenuController {
         return "sierra";
     }
 
-    @GetMapping("/FavoritoS")
-    public String FavoritoS() {
-        return "FavoritoS";
+    @GetMapping("/sierra_datos")
+    public String sierra_datos() {
+        return "sierra_datos";
     }
 
     @GetMapping("/yoj")

@@ -109,7 +109,7 @@
 
 <body>
 
-<!-- barra  -->
+
 <div class="sidebar">
     <h2>Sierrafy</h2>
     <a href="#">Inicio</a>
@@ -117,34 +117,28 @@
     <a href="#">Tu biblioteca</a>
 </div>
 
-<!-- Main -->
 <div class="main">
     <div class="header">
         <h1>Bienvenido, SierraMusic 🎧</h1>
     </div>
 
     <div class="playlists">
-        <div class="card">
 
-            <h3>Mis Favoritas</h3>
-            <p>Tus canciones más escuchadas del momento</p>
-        </div>
+        <a class="card" th:href="@{/sierra_datos}">Mis datos </a>
 
         <div class="card">
-
             <h3>Reggeton Clásico</h3>
             <p>Lo mejor del Anuel</p>
         </div>
 
         <div class="card">
-
             <h3>Para Programar</h3>
             <p>Música para concentrarte</p>
         </div>
-    </div>
 
-    <a class="volver" th:href="@{/}">← Volver al menú</a>
-</div>
+    </div>
+<a class="volver" th:href="@{/}">← Volver al menú</a>
+    </div>
 
 </body>
 </html>
